@@ -36,7 +36,7 @@ window.onload = function Load () {
     SaveGame = decode_utf8(SaveGame);
     window.GameTwo = JSON.parse(SaveGame);
 
-    GameTwo.money = money;
+    money = GameTwo.money;
 //    GameTwo.income = income;
 }
 
