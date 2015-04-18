@@ -2,8 +2,10 @@
  * Created by Megamoo on 4/16/2015.
  */
 var money, income;
-money = 0;
+var Game = new NewGame();
 income = 1;
+money = 0;
+
 
 function Tick() {
     money = money + income;
@@ -18,29 +20,32 @@ function GatherMoney() {
 var Timer = window.setInterval(function(){Tick()}, 1000);
 
 // Save Data
-var Game = new NewGame();
+
 
 function NewGame() {
     this.money = money;
 }
 
 function Save() {
-    var SaveGame = JSON.stringify(Game);
-    SaveGame = encode_utf8(SaveGame);
-    SaveGame = lzw_encode(SaveGame);
-    window.localStorage['SaveName'] = SaveGame;
+//    var SaveGame = JSON.stringify(Game);
+//    SaveGame = encode_utf8(SaveGame);
+//    SaveGame = lzw_encode(SaveGame);
+//    window.localStorage['SaveName'] = SaveGame;
+    window.localStorage['SaveName'] = JSON.stringify(Game);
 }
+
 window.onload = function Load () {
-    SaveGame = window.localStorage['SaveName'];
-    SaveGame = lzw_decode(SaveGame);
-    SaveGame = decode_utf8(SaveGame);
-    window.GameTwo = JSON.parse(SaveGame);
-
+//    SaveGame = window.localStorage['SaveName'];
+//    SaveGame = lzw_decode(SaveGame);
+//    SaveGame = decode_utf8(SaveGame);
+//    window.GameTwo = JSON.parse(SaveGame);
+    window.GameTwo = JSON.parse(window.localStorage['SaveName']);
     money = GameTwo.money;
-//    GameTwo.income = income;
+    document.getElementById("money").innerHTML = money;
+
 }
 
-
+/*
 // LZW-compress a string
 function lzw_encode(s) {
     var dict = {};
