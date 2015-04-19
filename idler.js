@@ -19,22 +19,20 @@ function updateValues() { //Updates values of shekels, building qty, etc.
 }
 
 function Reset() { //Reset all stats
-    game.money = 0;
-    Synagogue.qty = 0;
-    Save();
 	game.money = 0;
 	Synagogue.qty = 0;
 	updateValues(); //Updates values of shekels, building qty, etc.
 	Save();
 }
 
-function buySynagogue(){ //Buy buildings *TEMP*
-    if (game.money >= Synagogue.cost); { //Checks if the player has enough money
+function buySynagogue(){ //Buy Buildings *TEMP*
+    if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
         Synagogue.qty += 1;
-        updateValues(); //Updates values of shekels, building qty, etc.
+        updateValues();
     }
 }
+
 
 function Tick() { //Money gained per sec
     game.money += Synagogue.qty * Synagogue.persec;
@@ -55,8 +53,6 @@ window.onload = function() {  //Decode + Load
     SaveGame = decode_utf8(SaveGame);
     window.game = JSON.parse(SaveGame);
     window.game = new GameSave(); //Define Global Variable
-
-    updateValues(); //Updates values of shekels, building qty, etc.
 
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
