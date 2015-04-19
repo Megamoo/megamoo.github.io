@@ -1,30 +1,52 @@
 /**
  * Created by Megamoo on 4/16/2015.
  */
-var money, income;
-var Game = new NewGame();
-income = 1;
-money = 0;
+var synagogue;
+//var Game = new NewGame();
+synagogue = 0;
 
+
+window.onload = function() {
+//    SaveGame = window.localStorage['SaveName'];
+//    SaveGame = lzw_decode(SaveGame);
+//    SaveGame = decode_utf8(SaveGame);
+//    window.GameTwo = JSON.parse(SaveGame);
+    window.game = new GameSave();
+    game.money = JSON.parse(window.localStorage['SaveName']);
+    document.getElementById("money").innerHTML = game.money;
+};
 
 function Tick() {
-    money = money + income;
-    document.getElementById("money").innerHTML = money;
+    game.money = game.money + 1 + (Building.qty * Building.persec);
+    document.getElementById("money").innerHTML = game.money;
 }
 
 function GatherMoney() {
-    money = money + income;
-    document.getElementById("money").innerHTML = money;
+    game.money = game.money + 1;
+    document.getElementById("money").innerHTML = game.money;
 }
 
 var Timer = window.setInterval(function(){Tick()}, 1000);
+var AutoSave = window.setInterval(function(){Save()}, 10000);
 
+
+
+function Building() {
+    this.name = "Synagogue"
+    this.cost = 10;
+    this.persec = 1;
+    this.qty = 0;
+
+    if (money >= Building.cost) {
+        money = money - Building.cost;
+        Building.qty = Building.qty + 1;
+        document.getElementById("money").innerHTML = money;
+        document.getElementById("Building1Qty").innerHTML = Building.qty;
+    }
+}
 // Save Data
-
-
-function NewGame() {
-    this.savedata = [];
-    this.savedata[1] = money;
+function GameSave() {
+    this.money = 0;
 }
 
 function Save() {
@@ -32,19 +54,10 @@ function Save() {
 //    SaveGame = encode_utf8(SaveGame);
 //    SaveGame = lzw_encode(SaveGame);
 //    window.localStorage['SaveName'] = SaveGame;
-    window.localStorage['SaveName'] = JSON.stringify(money);
+    window.localStorage['SaveName'] = JSON.stringify(game.money);
 }
 
-window.onload = function Load () {
-//    SaveGame = window.localStorage['SaveName'];
-//    SaveGame = lzw_decode(SaveGame);
-//    SaveGame = decode_utf8(SaveGame);
-//    window.GameTwo = JSON.parse(SaveGame);
-    money = JSON.parse(window.localStorage['SaveName']);
-//    money = GameTwo.savedata[1];
-    document.getElementById("money").innerHTML = money;
 
-}
 
 // LZW-compress a string
 function lzw_encode(s) {
