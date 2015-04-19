@@ -14,13 +14,13 @@ function Building() { //Defines building object
 }
 
 function updateValues() { //Updates values of shekels, building qty, etc.
-	document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
     document.getElementById("building.qty").innerHTML = "Quantity : " + Synagogue.qty;
 }
 
 function Reset() { //Reset all stats
 	game.money = 0;
-	Synagogue.qty = 0;
+//	Synagogue.qty = 0;
 	updateValues(); //Updates values of shekels, building qty, etc.
 	Save();
 }
@@ -48,12 +48,14 @@ var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 window.onload = function() {  //Decode + Load
+    window.game = new GameSave(); //Define Global Variable
     SaveGame = window.localStorage['SaveName'];
     SaveGame = lzw_decode(SaveGame);
     SaveGame = decode_utf8(SaveGame);
     window.game = JSON.parse(SaveGame);
-    window.game = new GameSave(); //Define Global Variable
 
+
+    //Buildings
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
