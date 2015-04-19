@@ -19,6 +19,10 @@ function Reset() {
 	Save();
 }
 
+function Save() {
+	Save();
+}
+
 function buySynagogue(){
     if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
