@@ -13,9 +13,15 @@ function Building() {
     this.qty = 0;
 }
 
+function updateValues() {
+	document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    document.getElementById("building.qty").innerHTML = "Quantity : " + Synagogue.qty;
+}
+
 function Reset() {
 	game.money = 0;
 	Synagogue.qty = 0;
+	updateValues();
 	Save();
 }
 
@@ -23,19 +29,18 @@ function buySynagogue(){
     if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
         Synagogue.qty += 1;
-        document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
-        document.getElementById("building.qty").innerHTML = "Quantity : " + Synagogue.qty;
+        updateValues();
     }
 }
 
 function Tick() { //Money gained per sec
     game.money += Synagogue.qty * Synagogue.persec;
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    updateValues();
 }
 
 function gatherMoney() { //Money gained per click
     game.money = game.money + 1;
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    updateValues();
 }
 
 var Timer = window.setInterval(function(){Tick()}, 1000); //income
@@ -50,14 +55,12 @@ window.onload = function() {  //Load
     window.game = new GameSave(); //Defines Money as a global Var
     game.money = JSON.parse(window.localStorage['SaveName']); //Reads save and sets money
 
-
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
-//    document.getElementById("building.qty").innerHTML = "Quantity : " + game.quantity; //Displays quantity on page
-
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
     Synagogue.persec = 1;
+	
+	updateValues(); //Updates values of shekels, building qty, etc.
 };
 
 //var game = GameSave();
