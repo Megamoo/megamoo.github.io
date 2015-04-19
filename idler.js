@@ -3,7 +3,7 @@
  */
 function GameSave() {
     this.money = 0;
-//    this.quantity = 0;
+    this.quantity = 0;
 }
 
 function Building() {
@@ -14,9 +14,9 @@ function Building() {
 }
 
 function Reset() {
-	game.money = 0;
-	Synagogue.qty = 0;
-	Save();
+    game.money = 0;
+    Synagogue.qty = 0;
+    Save();
 }
 
 function buySynagogue(){
@@ -42,17 +42,14 @@ var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 window.onload = function() {  //Load
-//    SaveGame = window.localStorage['SaveName'];
-//   SaveGame = lzw_decode(SaveGame);
-//    SaveGame = decode_utf8(SaveGame);
-//    window.game = JSON.parse(SaveGame);
-
-    window.game = new GameSave(); //Defines Money as a global Var
-    game.money = JSON.parse(window.localStorage['SaveName']); //Reads save and sets money
-
+    SaveGame = window.localStorage['SaveName'];
+    SaveGame = lzw_decode(SaveGame);
+    SaveGame = decode_utf8(SaveGame);
+    window.game = JSON.parse(SaveGame);
+    window.game = new GameSave();
 
     document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
-//    document.getElementById("building.qty").innerHTML = "Quantity : " + game.quantity; //Displays quantity on page
+    document.getElementById("building.qty").innerHTML = "Quantity : " + game.quantity; //Displays quantity on page
 
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
@@ -60,17 +57,12 @@ window.onload = function() {  //Load
     Synagogue.persec = 1;
 };
 
-//var game = GameSave();
-
 function Save() {
-//    var SaveGame = JSON.stringify(Game);
-//    SaveGame = encode_utf8(SaveGame);
-//    SaveGame = lzw_encode(SaveGame);
-//   window.localStorage['SaveName'] = SaveGame;
-    window.localStorage['SaveName'] = JSON.stringify(game.money);
+    var SaveGame = JSON.stringify(game);
+    SaveGame = encode_utf8(SaveGame);
+    SaveGame = lzw_encode(SaveGame);
+    window.localStorage['SaveName'] = SaveGame;
 }
-
-
 
 // LZW-compress a string
 function lzw_encode(s) {
