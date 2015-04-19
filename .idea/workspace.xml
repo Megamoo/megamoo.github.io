@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="">
+    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="Reset Button">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idler.js" afterPath="$PROJECT_DIR$/idler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="megamoo.github.io.iws" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.076923" vertical-offset="122" max-vertical-offset="986">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state vertical-scroll-proportion="-12.961538" vertical-offset="139" max-vertical-offset="1003">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -41,8 +43,8 @@
       <file leaf-file-name="idler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.544" vertical-offset="255" max-vertical-offset="1394">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.19721578" vertical-offset="0" max-vertical-offset="1496">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
                 <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
@@ -57,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/idler.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -71,8 +73,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/idler.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/idler.js" />
       </list>
     </option>
@@ -307,7 +309,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429432580605</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Reset Button">
+      <created>1429434023829</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1429434023829</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -361,7 +369,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/idler.js</url>
-          <line>121</line>
+          <line>127</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -590,15 +598,15 @@
     <entry file="file://$PROJECT_DIR$/idler.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.076923" vertical-offset="122" max-vertical-offset="986">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state vertical-scroll-proportion="-12.961538" vertical-offset="139" max-vertical-offset="1003">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -607,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/idler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.544" vertical-offset="255" max-vertical-offset="1394">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.19721578" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
             <element signature="n#!!block;n#lzw_decode#0" expanded="false" />

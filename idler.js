@@ -13,19 +13,12 @@ function Building() {
     this.qty = 0;
 }
 
-<<<<<<< HEAD
 function Reset() {
 	game.money = 0;
 	Synagogue.qty = 0;
 	Save();
 }
 
-function Save() {
-	Save();
-}
-
-=======
->>>>>>> parent of a0e791e... Added reset
 function buySynagogue(){
     if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
