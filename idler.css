@@ -19,3 +19,8 @@
     font-size: 18px;
 }
 
+#bottom {
+    position: absolute;
+    text-align: end;
+    bottom: 0;
+}
