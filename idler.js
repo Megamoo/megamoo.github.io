@@ -1,63 +1,72 @@
 /**
  * Created by Megamoo on 4/16/2015.
  */
-function GameSave() {
+function GameSave() { //Stores save data
     this.money = 0;
     this.quantity = 0;
 }
 
-function Building() {
+function Building() { //Defines building object
     this.name = "Building Name";
     this.cost = 10;
     this.persec = 1;
     this.qty = 0;
 }
 
-function Reset() {
+function updateValues() { //Updates values of shekels, building qty, etc.
+	document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    document.getElementById("building.qty").innerHTML = "Quantity : " + Synagogue.qty;
+}
+
+function Reset() { //Reset all stats
     game.money = 0;
     Synagogue.qty = 0;
     Save();
+	game.money = 0;
+	Synagogue.qty = 0;
+	updateValues(); //Updates values of shekels, building qty, etc.
+	Save();
 }
 
-function buySynagogue(){
-    if (game.money >= Synagogue.cost) { //Checks if the player has enough money
+function buySynagogue(){ //Buy buildings *TEMP*
+    if (game.money >= Synagogue.cost); { //Checks if the player has enough money
         game.money -= Synagogue.cost;
         Synagogue.qty += 1;
-        document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
-        document.getElementById("building.qty").innerHTML = "Quantity : " + Synagogue.qty;
+        updateValues(); //Updates values of shekels, building qty, etc.
     }
 }
 
 function Tick() { //Money gained per sec
     game.money += Synagogue.qty * Synagogue.persec;
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    updateValues(); //Updates values of shekels, building qty, etc.
 }
 
 function gatherMoney() { //Money gained per click
     game.money = game.money + 1;
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
+    updateValues(); //Updates values of shekels, building qty, etc.
 }
 
 var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
-window.onload = function() {  //Load
+window.onload = function() {  //Decode + Load
     SaveGame = window.localStorage['SaveName'];
     SaveGame = lzw_decode(SaveGame);
     SaveGame = decode_utf8(SaveGame);
     window.game = JSON.parse(SaveGame);
-    window.game = new GameSave();
+    window.game = new GameSave(); //Define Global Variable
 
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
-    document.getElementById("building.qty").innerHTML = "Quantity : " + game.quantity; //Displays quantity on page
+    updateValues(); //Updates values of shekels, building qty, etc.
 
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
     Synagogue.persec = 1;
+	
+	updateValues(); //Updates values of shekels, building qty, etc.
 };
 
-function Save() {
+function Save() { //Save + Encode
     var SaveGame = JSON.stringify(game);
     SaveGame = encode_utf8(SaveGame);
     SaveGame = lzw_encode(SaveGame);
