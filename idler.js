@@ -23,7 +23,8 @@ var Timer = window.setInterval(function(){Tick()}, 1000);
 
 
 function NewGame() {
-    this.money = money;
+    this.savedata = [];
+    this.savedata[1] = money;
 }
 
 function Save() {
@@ -31,7 +32,7 @@ function Save() {
 //    SaveGame = encode_utf8(SaveGame);
 //    SaveGame = lzw_encode(SaveGame);
 //    window.localStorage['SaveName'] = SaveGame;
-    window.localStorage['SaveName'] = JSON.stringify(Game);
+    window.localStorage['SaveName'] = JSON.stringify(money);
 }
 
 window.onload = function Load () {
@@ -39,8 +40,8 @@ window.onload = function Load () {
 //    SaveGame = lzw_decode(SaveGame);
 //    SaveGame = decode_utf8(SaveGame);
 //    window.GameTwo = JSON.parse(SaveGame);
-    window.GameTwo = JSON.parse(window.localStorage['SaveName']);
-    money = GameTwo.money;
+    money = JSON.parse(window.localStorage['SaveName']);
+//    money = GameTwo.savedata[1];
     document.getElementById("money").innerHTML = money;
 
 }
