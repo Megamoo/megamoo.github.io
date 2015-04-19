@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idler.css" afterPath="$PROJECT_DIR$/idler.css" />
+    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="Reset Button">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idler.js" afterPath="$PROJECT_DIR$/idler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="megamoo.github.io.iws" />
@@ -41,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idler.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="idler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.107143" vertical-offset="0" max-vertical-offset="1377">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.544" vertical-offset="255" max-vertical-offset="1394">
+              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
               <folding>
                 <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
                 <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
@@ -56,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idler.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="idler.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/idler.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4330011" vertical-offset="0" max-vertical-offset="903">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -74,9 +72,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/idler.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/idler.css" />
+        <option value="$PROJECT_DIR$/idler.js" />
       </list>
     </option>
   </component>
@@ -298,7 +296,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429429760533</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Reset Button">
+      <created>1429431821551</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1429431821551</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -344,14 +348,15 @@
     <MESSAGE value="Test Update" />
     <MESSAGE value="Save Test" />
     <MESSAGE value="Save Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save Testing" />
+    <MESSAGE value="Reset Button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reset Button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/idler.js</url>
-          <line>120</line>
+          <line>121</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -577,16 +582,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idler.js">
+    <entry file="file://$PROJECT_DIR$/idler.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.107143" vertical-offset="0" max-vertical-offset="1377">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
-            <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
-            <element signature="n#!!block;n#encode_utf8#0" expanded="false" />
-            <element signature="n#!!block;n#decode_utf8#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -600,11 +600,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/idler.css">
+    <entry file="file://$PROJECT_DIR$/idler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4330011" vertical-offset="0" max-vertical-offset="903">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.544" vertical-offset="255" max-vertical-offset="1394">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
+            <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
+            <element signature="n#!!block;n#encode_utf8#0" expanded="false" />
+            <element signature="n#!!block;n#decode_utf8#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

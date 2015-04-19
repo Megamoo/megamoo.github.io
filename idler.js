@@ -3,6 +3,7 @@
  */
 function GameSave() {
     this.money = 0;
+    this.quantity = 0;
 }
 
 function building() {
@@ -13,7 +14,7 @@ function building() {
 }
 
 function buySynagogue(){
-    if (game.money >= Synagogue.cost) {
+    if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
         Synagogue.qty += 1;
         document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
@@ -35,27 +36,34 @@ var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 window.onload = function() {  //Load
-//    SaveGame = window.localStorage['SaveName'];
-//    SaveGame = lzw_decode(SaveGame);
-//    SaveGame = decode_utf8(SaveGame);
-//    window.GameTwo = JSON.parse(SaveGame);
-    window.game = new GameSave(); //Defines Money as a global Var
-    game.money = JSON.parse(window.localStorage['SaveName']); //Reads save and sets money
+    SaveGame = window.localStorage['SaveName'];
+    SaveGame = lzw_decode(SaveGame);
+    SaveGame = decode_utf8(SaveGame);
+    window.game = JSON.parse(SaveGame);
+//    window.game = new GameSave(); //Defines Money as a global Var
+    game.money =
+
+
+
     document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
+    document.getElementById("building.qty").innerHTML = "Quantity : " + game.money; //Displays quantity on page
 
     window.Synagogue = new building(); //Synagogue
-    Synagogue.name = "Lemonade Stand";
+    Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
     Synagogue.persec = 1;
 };
 
+var game = GameSave();
+
 function Save() {
-//    var SaveGame = JSON.stringify(Game);
-//    SaveGame = encode_utf8(SaveGame);
-//    SaveGame = lzw_encode(SaveGame);
-//    window.localStorage['SaveName'] = SaveGame;
-    window.localStorage['SaveName'] = JSON.stringify(game.money);
+    var SaveGame = JSON.stringify(Game);
+    SaveGame = encode_utf8(SaveGame);
+    SaveGame = lzw_encode(SaveGame);
+    window.localStorage['SaveName'] = SaveGame;
+//    window.localStorage['SaveName'] = JSON.stringify(game.money);
 }
+
 
 
 // LZW-compress a string
