@@ -12,7 +12,7 @@ window.onload = function() {
 //    window.GameTwo = JSON.parse(SaveGame);
     window.game = new GameSave();
     game.money = JSON.parse(window.localStorage['SaveName']);
-    document.getElementById("money").innerHTML = game.money;
+    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
 };
 
 function Synagogue() {

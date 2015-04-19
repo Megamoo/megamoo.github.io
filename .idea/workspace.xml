@@ -31,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="918">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="901">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -41,8 +41,8 @@
       <file leaf-file-name="idler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38857144" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.272" vertical-offset="0" max-vertical-offset="1207">
+              <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
               <folding>
                 <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
                 <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
@@ -258,7 +258,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429425242271</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Save Testing">
+      <created>1429427085246</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1429427085246</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -303,7 +309,8 @@
     </option>
     <MESSAGE value="Test Update" />
     <MESSAGE value="Save Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save Test" />
+    <MESSAGE value="Save Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save Testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,16 +538,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="918">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="901">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/idler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38857144" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.272" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
           <folding>
             <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
             <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
