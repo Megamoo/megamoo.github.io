@@ -45,7 +45,6 @@ window.onload = function Load () {
 
 }
 
-/*
 // LZW-compress a string
 function lzw_encode(s) {
     var dict = {};
