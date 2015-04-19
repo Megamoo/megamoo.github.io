@@ -3,10 +3,10 @@
  */
 function GameSave() {
     this.money = 0;
-    this.quantity = 0;
+//    this.quantity = 0;
 }
 
-function building() {
+function Building() {
     this.name = "Building Name";
     this.cost = 10;
     this.persec = 1;
@@ -42,32 +42,32 @@ var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 window.onload = function() {  //Load
-    SaveGame = window.localStorage['SaveName'];
-    SaveGame = lzw_decode(SaveGame);
-    SaveGame = decode_utf8(SaveGame);
-    window.game = JSON.parse(SaveGame);
-//    window.game = new GameSave(); //Defines Money as a global Var
-    game.money =
+//    SaveGame = window.localStorage['SaveName'];
+//   SaveGame = lzw_decode(SaveGame);
+//    SaveGame = decode_utf8(SaveGame);
+//    window.game = JSON.parse(SaveGame);
 
+    window.game = new GameSave(); //Defines Money as a global Var
+    game.money = JSON.parse(window.localStorage['SaveName']); //Reads save and sets money
 
 
     document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
-    document.getElementById("building.qty").innerHTML = "Quantity : " + game.money; //Displays quantity on page
+//    document.getElementById("building.qty").innerHTML = "Quantity : " + game.quantity; //Displays quantity on page
 
-    window.Synagogue = new building(); //Synagogue
+    window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
     Synagogue.persec = 1;
 };
 
-var game = GameSave();
+//var game = GameSave();
 
 function Save() {
-    var SaveGame = JSON.stringify(Game);
-    SaveGame = encode_utf8(SaveGame);
-    SaveGame = lzw_encode(SaveGame);
-    window.localStorage['SaveName'] = SaveGame;
-//    window.localStorage['SaveName'] = JSON.stringify(game.money);
+//    var SaveGame = JSON.stringify(Game);
+//    SaveGame = encode_utf8(SaveGame);
+//    SaveGame = lzw_encode(SaveGame);
+//   window.localStorage['SaveName'] = SaveGame;
+    window.localStorage['SaveName'] = JSON.stringify(game.money);
 }
 
 
