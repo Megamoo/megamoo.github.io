@@ -13,6 +13,12 @@ function building() {
     this.qty = 0;
 }
 
+function Reset() {
+	game.money = 0;
+	Synagogue.qty = 0;
+	Save();
+}
+
 function buySynagogue(){
     if (game.money >= Synagogue.cost) { //Checks if the player has enough money
         game.money -= Synagogue.cost;
