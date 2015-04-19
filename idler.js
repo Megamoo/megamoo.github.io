@@ -70,6 +70,12 @@ function Save() {
     window.localStorage['SaveName'] = JSON.stringify(game.money);
 }
 
+function Reset() {
+		game.money = 0;
+		Synagogue.qty = 0;
+		Save();
+}
+ 
 
 
 // LZW-compress a string
