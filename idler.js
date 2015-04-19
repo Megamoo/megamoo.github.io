@@ -1,6 +1,7 @@
 /**
  * Created by Megamoo on 4/16/2015.
  */
+
 function GameSave() { //Stores save data
     this.money = 0;
     this.quantity = 0;
@@ -33,7 +34,6 @@ function buySynagogue(){ //Buy Buildings *TEMP*
     }
 }
 
-
 function Tick() { //Money gained per sec
     game.money += Synagogue.qty * Synagogue.persec;
     updateValues(); //Updates values of shekels, building qty, etc.
@@ -49,19 +49,19 @@ var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 window.onload = function() {  //Decode + Load
     window.game = new GameSave(); //Define Global Variable
-    SaveGame = window.localStorage['SaveName'];
-    SaveGame = lzw_decode(SaveGame);
-    SaveGame = decode_utf8(SaveGame);
-    window.game = JSON.parse(SaveGame);
-
 
     //Buildings
     window.Synagogue = new Building(); //Synagogue
     Synagogue.name = "Synagogue";
     Synagogue.cost = 10;
     Synagogue.persec = 1;
-	
-	updateValues(); //Updates values of shekels, building qty, etc.
+
+    SaveGame = window.localStorage['SaveName'];
+    SaveGame = lzw_decode(SaveGame);
+    SaveGame = decode_utf8(SaveGame);
+    window.game = JSON.parse(SaveGame);
+
+    updateValues(); //Updates values of shekels, building qty, etc.
 };
 
 function Save() { //Save + Encode
