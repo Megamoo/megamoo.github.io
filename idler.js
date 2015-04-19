@@ -23,12 +23,12 @@ function buySynagogue(){
 
 function Tick() { //Money gained per sec
     game.money += Synagogue.qty * Synagogue.persec;
-    document.getElementById("money").innerHTML = game.money;
+    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
 }
 
 function gatherMoney() { //Money gained per click
     game.money = game.money + 1;
-    document.getElementById("money").innerHTML = game.money;
+    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
 }
 
 var Timer = window.setInterval(function(){Tick()}, 1000); //income
