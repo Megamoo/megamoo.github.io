@@ -1,10 +1,9 @@
 /**
  * Created by Megamoo on 4/16/2015.
  */
-var synagogue;
-//var Game = new NewGame();
-synagogue = 0;
-
+function GameSave() {
+    this.money = 0;
+}
 
 window.onload = function() {
 //    SaveGame = window.localStorage['SaveName'];
@@ -16,8 +15,24 @@ window.onload = function() {
     document.getElementById("money").innerHTML = game.money;
 };
 
+function Synagogue() {
+    this.name = "Synagogue";
+    this.cost = 10;
+    this.persec = 1;
+    this.qty = 0;
+
+    if (game.money >= building.cost) {
+        game.money = game.money - building.cost;
+        building.qty = building.qty + 1;
+        document.getElementById("money").innerHTML = game.money;
+        document.getElementById("building.qty").innerHTML = building.qty;
+    }
+}
+
+var building = Synagogue();
+
 function Tick() {
-    game.money = game.money + 1 + (Building.qty * Building.persec);
+    game.money = game.money + (building.qty * building.persec);
     document.getElementById("money").innerHTML = game.money;
 }
 
@@ -26,29 +41,10 @@ function GatherMoney() {
     document.getElementById("money").innerHTML = game.money;
 }
 
-var Timer = window.setInterval(function(){Tick()}, 1000);
-var AutoSave = window.setInterval(function(){Save()}, 10000);
-
-
-
-function Building() {
-    this.name = "Synagogue";
-    this.cost = 10;
-    this.persec = 1;
-    this.qty = 0;
-
-    if (money >= Building.cost) {
-        money = money - Building.cost;
-        Building.qty = Building.qty + 1;
-        document.getElementById("money").innerHTML = money;
-        document.getElementById("Building1Qty").innerHTML = Building.qty;
-    }
-}
+var Timer = window.setInterval(function(){Tick()}, 1000); //income
+var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 // Save Data
-function GameSave() {
-    this.money = 0;
-}
 
 function Save() {
 //    var SaveGame = JSON.stringify(Game);
@@ -57,7 +53,6 @@ function Save() {
 //    window.localStorage['SaveName'] = SaveGame;
     window.localStorage['SaveName'] = JSON.stringify(game.money);
 }
-
 
 
 // LZW-compress a string
