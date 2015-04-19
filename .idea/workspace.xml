@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="">
+    <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="Save Testing">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idler.js" afterPath="$PROJECT_DIR$/idler.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="901">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="901">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -41,8 +41,8 @@
       <file leaf-file-name="idler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.272" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.15777262" vertical-offset="0" max-vertical-offset="1258">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
                 <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
                 <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
@@ -71,8 +71,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/idler.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -264,7 +264,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429427085246</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Save Testing">
+      <created>1429427249747</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1429427249747</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -317,7 +323,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/idler.js</url>
-          <line>110</line>
+          <line>113</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -513,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$EXa0.680/Javascript Saving/Saving.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="903">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.7054265" vertical-offset="14030" max-vertical-offset="81617">
@@ -538,16 +537,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="901">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="901">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.649/Incremental.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.071429" vertical-offset="0" max-vertical-offset="952">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/idler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.272" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.15777262" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
             <element signature="n#!!block;n#lzw_decode#0" expanded="false" />

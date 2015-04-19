@@ -5,38 +5,28 @@ function GameSave() {
     this.money = 0;
 }
 
-window.onload = function() {
-//    SaveGame = window.localStorage['SaveName'];
-//    SaveGame = lzw_decode(SaveGame);
-//    SaveGame = decode_utf8(SaveGame);
-//    window.GameTwo = JSON.parse(SaveGame);
-    window.game = new GameSave();
-    game.money = JSON.parse(window.localStorage['SaveName']);
-    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
-};
-
-function Synagogue() {
-    this.name = "Synagogue";
+function building() {
+    this.name = "Building Name";
     this.cost = 10;
     this.persec = 1;
     this.qty = 0;
+}
 
-    if (game.money >= building.cost) {
-        game.money = game.money - building.cost;
-        building.qty = building.qty + 1;
+function buySynagogue(){
+    if (game.money >= Synagogue.cost) {
+        game.money -= Synagogue.cost;
+        Synagogue.qty += 1;
         document.getElementById("money").innerHTML = game.money;
-        document.getElementById("building.qty").innerHTML = building.qty;
+        document.getElementById("building.qty").innerHTML = Synagogue.qty;
     }
 }
 
-var building = Synagogue();
-
-function Tick() {
-    game.money = game.money + (building.qty * building.persec);
+function Tick() { //Money gained per sec
+    game.money += Synagogue.qty * Synagogue.persec;
     document.getElementById("money").innerHTML = game.money;
 }
 
-function GatherMoney() {
+function gatherMoney() { //Money gained per click
     game.money = game.money + 1;
     document.getElementById("money").innerHTML = game.money;
 }
@@ -44,7 +34,20 @@ function GatherMoney() {
 var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
-// Save Data
+window.onload = function() {  //Load
+//    SaveGame = window.localStorage['SaveName'];
+//    SaveGame = lzw_decode(SaveGame);
+//    SaveGame = decode_utf8(SaveGame);
+//    window.GameTwo = JSON.parse(SaveGame);
+    window.game = new GameSave(); //Defines Money as a global Var
+    game.money = JSON.parse(window.localStorage['SaveName']); //Reads save and sets money
+    document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money; //Displays money on page
+
+    window.Synagogue = new building(); //Synagogue
+    Synagogue.name = "Lemonade Stand";
+    Synagogue.cost = 10;
+    Synagogue.persec = 1;
+};
 
 function Save() {
 //    var SaveGame = JSON.stringify(Game);
