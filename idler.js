@@ -12,6 +12,12 @@ function building() {
     this.qty = 0;
 }
 
+function Reset() {
+	game.money = 0;
+	Synagogue.qty = 0;
+	Save();
+}
+
 function buySynagogue(){
     if (game.money >= Synagogue.cost) {
         game.money -= Synagogue.cost;
