@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8cae0d07-a3cc-414a-8d15-6fbb4a5cc8f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/idler.js" afterPath="$PROJECT_DIR$/idler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="megamoo.github.io.iws" />
@@ -41,8 +40,8 @@
       <file leaf-file-name="idler.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/idler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8660022" vertical-offset="0" max-vertical-offset="1275">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.30121815" vertical-offset="0" max-vertical-offset="1292">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding>
                 <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
                 <element signature="n#!!block;n#lzw_decode#0" expanded="false" />
@@ -246,7 +245,13 @@
       <option name="project" value="LOCAL" />
       <updated>1429419122083</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Save Test">
+      <created>1429425193319</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1429425193319</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -298,7 +303,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/idler.js</url>
-          <line>114</line>
+          <line>115</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -527,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/idler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8660022" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.30121815" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding>
             <element signature="n#!!block;n#lzw_encode#0" expanded="false" />
             <element signature="n#!!block;n#lzw_decode#0" expanded="false" />

@@ -32,7 +32,7 @@ var AutoSave = window.setInterval(function(){Save()}, 10000);
 
 
 function Building() {
-    this.name = "Synagogue"
+    this.name = "Synagogue";
     this.cost = 10;
     this.persec = 1;
     this.qty = 0;
@@ -44,6 +44,7 @@ function Building() {
         document.getElementById("Building1Qty").innerHTML = Building.qty;
     }
 }
+
 // Save Data
 function GameSave() {
     this.money = 0;
