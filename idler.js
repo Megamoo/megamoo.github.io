@@ -16,7 +16,7 @@ function buySynagogue(){
     if (game.money >= Synagogue.cost) {
         game.money -= Synagogue.cost;
         Synagogue.qty += 1;
-        document.getElementById("money").innerHTML = game.money;
+        document.getElementById("money").innerHTML = "Shekels in the BANK : " + game.money;
         document.getElementById("building.qty").innerHTML = Synagogue.qty;
     }
 }
