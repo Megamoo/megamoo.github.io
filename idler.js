@@ -6,6 +6,8 @@ var buildings = [];
 
 function GameSave() { //Stores save data
     this.money = 0;
+//    this.test = [];
+//    this.test[0] = buildings[0].qty;
 }
 
 function Building() { //Defines building object
@@ -123,7 +125,7 @@ function Save() { //Save + Encode
         Save();
     }
 
-var Timer = window.setInterval(function(){Tick()}, 100); //income
+var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
 
 function updateValues() { //Updates values of shekels, building qty, etc.
