@@ -27,3 +27,15 @@
     bottom: 0;
 	margin-left: -8px;
 }
+
+.block {
+    font-size: 12px;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    margin-top: 25px;
+
+    display: inline-block;
+    width: 65%;
+    padding: 10px;
+}

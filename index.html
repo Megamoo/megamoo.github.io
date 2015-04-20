@@ -13,21 +13,21 @@
         <div id="game-title">
             Hey There Idler
         </div>
-        <img src="https://saboteur365.files.wordpress.com/2014/12/le-happy-merchant.jpg?w=584" alt="le happy merchant" style="width:500px;height:400px">
+        <img src="https://saboteur365.files.wordpress.com/2014/12/le-happy-merchant.jpg?w=584" alt="le happy merchant" style="width:400px;height:300px">
     </div>
 
     <div id="content">
-        <div id="stats" class="block">
+        <div id="stats">
             <div id="money" class="label">Shekels in the BANK : 0</div>
         </div>
 
-        <div id="clickables" class="block">
+        <div id="clickables">
             <input type="button" value="Click Me!" onclick="gatherMoney()">
         </div>
 
         <div id="buildings" class="block">
             <div id="Building1">
-                <input type="button" value="Synagogue" onclick="buySynagogue();">
+                <input type="button" value="Synagogue" onclick="Build(1);">
                 <div id="building.cost">
                     Cost : 10
                 </div>
@@ -41,7 +41,7 @@
         </div>
 
         <div id="upgrades" class="block">
-
+            <input type="button" value="Upgrade Synagogue" onclick="upgradeSynagogue();">
         </div>
 
         <div id="footer">
