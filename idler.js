@@ -118,7 +118,7 @@ function Save() { //Save + Encode
 
     function Reset() { //Reset all stats
         game.money = 0;
-//	Synagogue.qty = 0;
+	    buildings[0].qty = 0;
         updateValues(); //Updates values of shekels, building qty, etc.
         Save();
     }
