@@ -19,8 +19,11 @@
     font-size: 18px;
 }
 
-#bottom {
+#footer {
+	background-color: black;
+	width:100%;
     position: absolute;
-    text-align: end;
+    text-align: left;
     bottom: 0;
+	margin-left: -8px;
 }
