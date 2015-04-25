@@ -6,8 +6,7 @@ var buildings = [];
 
 function GameSave() { //Stores save data
     this.money = 0;
-//    this.test = [];
-//    this.test[0] = buildings[0].qty;
+    this.quantity = [];
 }
 
 function Building() { //Defines building object
@@ -109,8 +108,6 @@ function decode_utf8(s) {
     return decodeURIComponent(escape(s));
 }
 
-
-
 function Save() { //Save + Encode
     var SaveGame = JSON.stringify(game);
     SaveGame = encode_utf8(SaveGame);
@@ -118,12 +115,12 @@ function Save() { //Save + Encode
     window.localStorage['SaveName'] = SaveGame;
 }
 
-    function Reset() { //Reset all stats
-        game.money = 0;
-	    buildings[0].qty = 0;
-        updateValues(); //Updates values of shekels, building qty, etc.
-        Save();
-    }
+function Reset() { //Reset all stats
+    game.money = 0;
+    buildings[0].qty = 0;
+    updateValues(); //Updates values of shekels, building qty, etc.
+    Save();
+}
 
 var Timer = window.setInterval(function(){Tick()}, 1000); //income
 var AutoSave = window.setInterval(function(){Save()}, 10000); //autosave
