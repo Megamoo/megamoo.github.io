@@ -4,10 +4,6 @@
 
 var buildings = [];
 
-function GameSave() { //Stores save data
-    this.money = 0;
-    this.quantity = [];
-}
 
 function Building() { //Defines building object
     this.name = "Building Name";
@@ -16,17 +12,25 @@ function Building() { //Defines building object
     this.qty = 0;
 }
 
-function LoadBuilding(name,cost,persec) {
+function LoadBuilding(name,cost,persec,qty) {  //Building Framework
     var cur = buildings.length;
 
     buildings[cur] = new Building();
     buildings[cur].name = name;
     buildings[cur].cost = cost;
     buildings[cur].persec = persec;
+    buildings[cur].qty = qty;
 }
 
-function InitBuildings() {
-    LoadBuilding("Synagogue",10,1)
+function InitBuildings() {    //Uses the framework above to create 'buildings'
+    LoadBuilding("Synagogue",10,1,0)
+}
+
+function GameSave() { //Stores save data
+    this.money = 0;
+    this.quantity = [];
+    this.quantity[0] = 0;
+    this.quantity[0] = 1;
 }
 
 function Build() { //Buy Buildings *TEMP*
@@ -45,6 +49,15 @@ function Tick() { //Money gained per sec
 function gatherMoney() { //Money gained per click
     game.money++;
     updateValues(); //Updates values of shekels, building qty, etc.
+}
+
+
+function encode_utf8(s) {
+    return unescape(encodeURIComponent(s));
+}
+
+function decode_utf8(s) {
+    return decodeURIComponent(escape(s));
 }
 
 // LZW-compress a string
@@ -100,18 +113,12 @@ function lzw_decode(s) {
     return out.join("");
 }
 
-function encode_utf8(s) {
-    return unescape(encodeURIComponent(s));
-}
 
-function decode_utf8(s) {
-    return decodeURIComponent(escape(s));
-}
 
 function Save() { //Save + Encode
     var SaveGame = JSON.stringify(game);
-    SaveGame = encode_utf8(SaveGame);
-    SaveGame = lzw_encode(SaveGame);
+//    SaveGame = encode_utf8(SaveGame);
+//    SaveGame = lzw_encode(SaveGame);
     window.localStorage['SaveName'] = SaveGame;
 }
 
@@ -137,8 +144,8 @@ window.onload = function() {  //Decode + Load
     InitBuildings();
 
     SaveGame = window.localStorage['SaveName'];
-    SaveGame = lzw_decode(SaveGame);
-    SaveGame = decode_utf8(SaveGame);
+//    SaveGame = lzw_decode(SaveGame);
+//    SaveGame = decode_utf8(SaveGame);
     window.game = JSON.parse(SaveGame);
 
     updateValues(); //Updates values of shekels, building qty, etc.

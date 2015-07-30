@@ -1,8 +1,31 @@
-#header {
-    font-size: 20px;
-    color: #123456;
+body{
+    margin: 0;
+    background-color: #4372AA;
+    height:100%;
+}
+
+header {
+    display: inline-block;
+    background-color: #26466D;
+    height: 50pt;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
+    min-width: 755px;
+    padding-left: 15px;
+}
+
+footer {
+    background-color: #26466D;
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    padding-left: 15px;
+    min-width: 755px;
+}
+
+#content {
+    text-align: center;
 }
 #stats {
     font-size: 16px;
@@ -12,20 +35,8 @@
 #label {
     font-size: 16px;
     text-align: center;
-    margin-top: 30px;
-}
-#page {
-    text-align: center;
-    font-size: 18px;
-}
+    margin-top: 15px;
 
-#footer {
-	background-color: black;
-	width:100%;
-    position: absolute;
-    text-align: left;
-    bottom: 0;
-	margin-left: -8px;
 }
 
 .block {
@@ -33,9 +44,39 @@
     font-weight: normal;
     color: black;
     text-align: center;
-    margin-top: 25px;
-
-    display: inline-block;
+    margin-top: 15px;
     width: 65%;
     padding: 10px;
+}
+
+.wrapper {
+    min-height:100%;
+    height:auto;
+    margin: 0 auto -4em;
+}
+#clickables {
+    width:25%;
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    width: 200px;
+    padding: .4rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    background: rgba(255,255,255,0.23);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background;
+    text-align: center;
+}
+input:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+input:focus {
+    outline:0;
 }
